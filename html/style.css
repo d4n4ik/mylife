@@ -1,0 +1,159 @@
+.header {
+	position: relative;
+	background-image: url(images/bg.jpg);
+	background-position: center;
+    background-size: cover;
+    height: 800px;
+    text-align: center;
+}
+
+.header .container {
+position: absolute;
+left: 0;
+top: 0;
+right: 0;
+bottom: 0;
+height: 500px;
+margin: auto;
+text-align: center;
+color: white;
+}
+
+.container {
+	display: block;
+	margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container h1 {
+	position: relative;
+	color: white;
+	margin-top: 45px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    font-size: 120px;
+    line-height: 100px;
+}
+
+.header .container p {
+	color: white;
+	position: relative;
+	font-weight: 500;
+    letter-spacing: 8px;
+    margin-bottom: 40px;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+
+.btn {
+	color: white;
+	background: black;
+	padding-top: 10px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    text-decoration: none;
+}
+
+.btn:hover {
+	background-color: blue;
+}
+
+.nav {
+	background: black;
+	height: 100px;
+	width: 100%;
+}
+
+.nav ul{
+	height: 100px;
+	list-style: none;
+	margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+	padding: 0;
+	text-align: center;
+	width: 700px;
+}
+
+.nav ul li {
+	color: white;
+	display: inline-block;
+	height: 100px;
+	line-height: 100px;
+	list-style: none;
+	width: 130px;
+}
+
+.nav ul li:hover {
+	background-color: blue;
+	cursor: pointer;
+}
+
+.main .container {
+	margin: 80px auto;
+}
+
+.main img {
+	float: left;
+    margin: 50px 80px 50px 0;
+}
+
+.jumbotron {
+	background: url(images/jumbotron_bg.jpg) center center;
+	background-size: cover;
+	height: 600px;
+	width: 100%;
+}
+
+.jumbotron .container {
+	position: relative;
+	top: 220px;
+}
+
+.jumbotron h2 {
+	color: white;
+	text-align: right;
+}
+
+.jumbotron p{
+	color: white;
+	text-align: right;
+}
+
+.jumbotron .btn {
+	float: right;
+}
+
+.footer {
+	background: black;
+	height: 100px;
+}
+
+.footer p {
+	color: white;
+	font-size: 15px;
+	height: 100px;
+	line-height: 100px;
+	margin: 0;
+}
+
+body {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+h1 span {
+	display: block;
+}
+
+h2 {
+	display: block;
+	font-weight: bold;
+}
+
