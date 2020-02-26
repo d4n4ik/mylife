@@ -1,0 +1,73 @@
+body {
+
+	margin: 0;
+
+}
+
+div {
+
+	font-weight: bolder;
+	font-family: "Roboto", sans-serif;
+
+}
+
+.header {
+
+	top: 0;
+	width: 100%;
+	height: 80px;
+	text-align: center;
+	background-color: gold;
+	line-height: 80px;
+
+}
+
+.main {
+
+	position: relative;
+	height: 670px;
+	width: 500px;
+	margin: 0 auto;
+	background-color: orange;
+	text-align: center;
+	border-right: 4px solid gold;
+	border-left: 4px solid gold;
+
+}
+
+.footer {
+
+	width: 100%;
+	height: 80px;
+	bottom: 0;
+	text-align: center;
+	background-color: red;
+	line-height: 80px;
+
+}
+
+.block1 {
+
+	position: relative;
+	background-color: red;
+	height: 40px;
+	width: 120px;
+	text-align: center;
+	line-height: 40px;
+	margin-top: 70%;
+	margin-left: 25%;
+
+}
+
+.block2 {
+
+	position: absolute;
+	background-color: green;
+	height: 40px;
+	width: 120px;
+	text-align: center;
+	line-height: 40px;
+	margin-top: 66%;
+	margin-left: 45%;
+
+}
