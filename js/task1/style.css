@@ -1,0 +1,31 @@
+div img {
+    height: 100px;
+    width: auto;
+    background-position: center;
+}
+
+div .size img {
+    height: 100px;
+    width: auto;
+    background-position: center;
+}
+
+div .size .cat1 img {
+    height: 120px;
+    width: auto;
+    background-position: center;
+}
+
+.block {
+    display: block;
+    height: 25px;
+    width: 100%;
+    font-weight: bolder;
+    margin-left: 45%;
+}
+
+.size {
+    display: block;
+    height: 350px;
+    width: auto;
+}
