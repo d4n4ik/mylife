@@ -9,8 +9,8 @@ var form = document.createElement('form'),
     labelRows = document.createElement('label'),
     button = document.createElement('button')
 ;
-
-
+// объявили форму и объявили в ней элементы
+// каждому элементу присвоили тип, отображение и id
 inputCols.type = 'text';
 inputCols.id = 'cols';
 inputCols.style.display = 'block';
@@ -38,16 +38,16 @@ button.onclick = () => {
     createTable(
         document.getElementById('cols').value,
         document.getElementById('rows').value,
-    );
-    createFunctionPanel();
-    form.reset();
+    ); // таблица по входным данным (столбцы и строки)
+    createFunctionPanel(); //создаем панель функций
+    form.reset(); // выключаем форму
 };
 
 form.append(labelCols, inputCols,
     labelRows, inputRows, button);
-document.body.append(form);
+document.body.append(form); // добавили в форму элементы, а форму добавили в документ
 
-function createTable(cols, rows) {
+function createTable(cols, rows) { // создаем таблицу по входным данным
     let table = document.createElement('table');
     table.style.borderCollapse = 'collapse';
 
@@ -62,7 +62,7 @@ function createTable(cols, rows) {
     document.body.append(table);
 }
 
-function createTableCell() {
+function createTableCell() { // создаем ячейку
     let td = document.createElement('td');
     td.style.minWidth = '100px';
     td.style.height = '30px';
@@ -72,7 +72,7 @@ function createTableCell() {
 }
 
 // 3
-function createTableCellContent(td) {
+function createTableCellContent(td) { // как будет выглядеть ячейка, содержимое
     td.innerHTML = '';
     let form = document.createElement('form'),
         textarea = document.createElement('textarea'),
@@ -93,7 +93,7 @@ function createTableCellContent(td) {
 }
 
 // 4. Оформление блока с функцией
-function createFunctionPanel() {
+function createFunctionPanel() { // панель из функций
     let divWrapper = document.createElement('div');
     divWrapper.className = 'function_container';
     divWrapper.append(borderChanger(),
@@ -104,7 +104,7 @@ function createFunctionPanel() {
     document.body.append(divWrapper);
 }
 
-function createFunction(functionName) {
+function createFunction(functionName) { // создаем функцию в панели
     let div = document.createElement('div'),
         p = document.createElement('p')
     ;
@@ -115,7 +115,7 @@ function createFunction(functionName) {
 }
 
 // 5. добавить элемент “Изменить границы таблицы”
-function borderChanger() {
+function borderChanger() { // функция смены границ
     let div = createFunction('Изменить границы таблицы');
 
     let form = document.createElement('form'),
@@ -135,8 +135,8 @@ function borderChanger() {
     option.selected = true;
     select.append(option);
 // TO-DO: placeholder
-    getBorderOptions().forEach((option) => select.append(option));
-
+    getBorderOptions().forEach((option) => select.append(option)); // добавляем
+// виды границ, добавляем все варианты
     inputBorderWidth.oninput = () => {
         button.innerText = 'Применить' + ' ' + inputBorderWidth.value + ' px ';
         if (select.value !== '' && select.value !== 'Выберите стиль рамки') {
@@ -151,9 +151,9 @@ function borderChanger() {
         } else {
             button.innerText = 'Применить' + ' ' + 'рамка ' + select.value;
         }
-    };
+    }; // как будет кнопка отображаться
 
-    button.onclick = () => {
+    button.onclick = () => { // при нажатии меняем границы
         let tdList = document.querySelectorAll('td');
         tdList.forEach((td) =>
             td.style.border = `${inputBorderWidth.value}px ${select.value}`
@@ -165,7 +165,7 @@ function borderChanger() {
     return div;
 }
 
-function getBorderOptions() {
+function getBorderOptions() { // добавляем все варианты в селект
     let borderOptions = [];
     ['dotted', 'dashed', 'solid', 'double', 'groove', 'ridge', 'inset', 'outset'].forEach(
         (borderStyle) => {
@@ -178,7 +178,7 @@ function getBorderOptions() {
 }
 
 // 6. добавить элемент “Добавить заголовок”.
-function captionChanger() {
+function captionChanger() { // добавляем заголовок к таблице
     let div = createFunction('Добавить заголовок');
     let form = document.createElement('form'),
         inputElement = document.createElement('input'),
@@ -191,10 +191,10 @@ function captionChanger() {
 
     // После нажатия у таблицы появляется заголовок.
     button.onclick = () => {
+        document.querySelector('table').deleteCaption();
         let caption = document.createElement('caption');
         caption.innerText = inputElement.value;
         document.querySelector('table').append(caption);
-
     };
 
     form.append(inputElement, button);
@@ -236,10 +236,10 @@ function divRandomContentCreator() {
     ;
 
     button.type = 'button';
-    button.innerText = 'Magic';
+    button.innerText = 'Рандомайзер';
 
     button.onclick = () => {
-        let td = chooseRandomTableDataCell();
+        let td = chooseRandomTableDataCell(); // выбираем рандомную ячейку
         magic(td);
     };
     div.append(button);
@@ -255,14 +255,14 @@ function chooseRandomTableDataCell() {
 
 function magic(td) {
     if (randomInteger(1, 15) === 7) {
-        td.append(createTableCellContent(td));
+        td.append(createTableCellContent(td)); // заново создаем поле
     } else {
-        chooseRandomBgColor(td);
-        chooseRandomFontStyle(td);
+        chooseRandomBgColor(td); // рандомный цвет
+        chooseRandomFontStyle(td); // рандомный цвет шрифта и размер шрифта
     }
 }
 
-function setRandomColor() {
+function setRandomColor() { // создаем рандомный цвет
     let hexTable = "0123456789ABCDEF";
     let newColor = '#';
     for (let i = 0; i < 6; i++) {
@@ -272,11 +272,11 @@ function setRandomColor() {
     return newColor;
 }
 
-function chooseRandomBgColor(td) {
+function chooseRandomBgColor(td) { // выбираем рандомный цвет ячейки
     td.style.backgroundColor = setRandomColor();
 }
 
-function chooseRandomFontStyle(td) {
+function chooseRandomFontStyle(td) { // размер шрифта и цвет шрифта
     let newColor = setRandomColor();
     let newFontSize = randomInteger(15, 25) + 'pt';
     td.style.color = newColor;
@@ -292,14 +292,14 @@ function chooseRandomFontStyle(td) {
     }
 }
 
-function randomInteger(min, max) {
+function randomInteger(min, max) { // функция рандомного числа
     // случайное число от min до (max+1)
     let rand = min + Math.random() * (max + 1 - min);
     return Math.floor(rand);
 }
 
 // 9. добавить элемент “Удалить”
-function tableDeleter() {
+function tableDeleter() { //выпиливаем таблицу и панель функций из этой жизни
     let div = createFunction('Удалить');
     let button = document.createElement('button')
     ;
