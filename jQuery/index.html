@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery task</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <h1>Yarygin Danil<span>jQuery task</span></h1>
+        <p>Connect with me
+        <a href="https://vk.com/d4nch1k">@d4nch1k</a></p>
+        <a class="btn" href="#" onclick="slowScroll('.nav')">Scroll me</a>
+    </div>
+</div>
+
+<div class="nav">
+    <div class="container">
+        <ul>
+            <li>I</li>
+            <li>WANNA</li>
+            <li>PASS</li>
+            <li>THIS</li>
+            <li>LAB</li>
+        </ul>
+    </div>
+</div>
+
+<div class="main">
+    <div class="container">
+        <img src="images/jquery.png" height="128" width="196">
+        <h2>jQuery task</h2>
+        <p id="par1">And now you can click on the links below and see the github profiles of the two Jedi masters</p>
+        <a id="fsttsk1" href="https://github.com/inxaoc">Vlasov Vitaliy Vladimirovich</a>
+        <p>
+        <a id="fsttsk2" href="https://github.com/bobleman">Berezhnoy Ivan Alexandrovich</a>
+        </p>
+        <p id="par2">Thanks for the attention</p>
+        <p><button id="ajax">Reload page</button></p>
+    </div>
+</div>
+
+<div class="jumbotron">
+    <form>
+        <fieldset>
+            <legend>Subscription</legend>
+            <p><label>Enter your name</label></p>
+            <p><input name="name" type="text"></p>
+            <p><label>Enter your e-mail</label></p>
+            <p><input name="mail" type="email"></p>
+            <p><button type="button">Subscribe</button></p>
+        </fieldset>
+    </form>
+<div>
+<table border="1">
+    <tr>
+        <td>
+            <p>Fade Out</p>
+        </td>
+        <td>
+            <button id="fadeOut">Fade Out</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p style="display: none;">Fade In</p>
+        </td>
+        <td>
+            <button id="fadeIn">Fade In</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Fade to</p>
+        </td>
+        <td>
+            <button id="fadeTo">Fade to</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p style="display: none;">Slide down</p>
+        </td>
+        <td>
+            <button id="slideDown">Slide down</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Slide toggle</p>
+        </td>
+        <td>
+            <button id="slideToggle">Slide toggle</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Toggle</p>
+        </td>
+        <td>
+            <button id="toggle">Toggle</button>
+        </td>
+    </tr>
+</table>
+</div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <ul>
+            <li><p>&copy; In partnership with <a href="https://itmo.ru/ru/">ITMO University</a></p></li>
+            <li><a class="btn" href="#" onclick="slowScroll('.header')">UP^^^</a></li>
+        </ul>
+    </div>
+</div>
+    <script src="main.js"></script>
+</body>
+</html>
